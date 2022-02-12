@@ -57,5 +57,5 @@ example : if [3 >= 2]; then   or if [3 -ge 3]; then
 			echo "number is greater than 2"
 		  fi
 		  
-command : cmd /k	//This is used for holding the console window just like a getch() function in c language
+command : cmd /k	//This is used for holding the console window just like a getch() function in c language.
 command : 
