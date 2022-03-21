@@ -10,9 +10,24 @@ echo "Arithmatic operation....."
 echo "Add : $((number1 + number2))"
 echo "Subtract : $((number1 - number2))"
 echo "Multiply : $((number1 * number2))"
-echo "Divide : $((number1 % number2))"
+echo "Divide : $((number1 / number2))"
 echo "Modulus : $((number1 % number2))"
 echo "Shorthand : $((number1+=10))"
+
+echo "----------------------------------------"
+echo "----Without using double parenthesis----"
+echo "----------------------------------------"
+
+# or same without two parenthesis use EXPR keyword so called expression
+
+echo "Add : $(expr $number1 + $number2)"
+echo "Subtract : $(expr $number1 - $number2)"
+
+# Here expr is not working working * it will give error so we need to use escape character \ 
+echo "Multiply : $(expr $number1 \* $number2)"
+echo "Divide : $(expr $number1 / $number2)"
+echo "Modulus : $(expr $number1 % $number2)"
+
 
 cmd /k
 

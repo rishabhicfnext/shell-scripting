@@ -2,21 +2,35 @@
 
 echo "Logical operator..."
 
-read -p "Enter the age : " age
+a=10
+b=20
 
-if [ $age -gt 12 -a $age -lt 20 ] ;then
-	echo "This is a teenager"
+if [ $a != $b ]
+then
+   echo "$a != $b : a is not equal to b"
 else
-	echo "This is not a teenager"
+   echo "$a != $b: a is equal to b"
 fi
 
-#Here I am using -o that is OR operator 
-#same as for AND operator we use -a
-
-if [ $age -ge 18 -o $age -le 59 ] ;then
-	echo "This is a adult"
+if [ $a -lt 100 -a $b -gt 15 ]
+then
+   echo "$a -lt 100 -a $b -gt 15 : returns true"
 else
-	echo "This is not a adult"
+   echo "$a -lt 100 -a $b -gt 15 : returns false"
+fi
+
+if [ $a -lt 100 -o $b -gt 100 ]
+then
+   echo "$a -lt 100 -o $b -gt 100 : returns true"
+else
+   echo "$a -lt 100 -o $b -gt 100 : returns false"
+fi
+
+if [ $a -lt 5 -o $b -gt 100 ]
+then
+   echo "$a -lt 100 -o $b -gt 100 : returns true"
+else
+   echo "$a -lt 100 -o $b -gt 100 : returns false"
 fi
 
 # here -o for or condition like ||
